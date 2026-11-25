@@ -1,4 +1,4 @@
-# 💶 Conversor de Divisas (BCE) - Integración de Datos XML y GUI
+# Conversor de Divisas (BCE) - Integración de Datos XML y GUI
 
 Aplicación interactiva desarrollada en **Python** con **Streamlit** que consume en tiempo real los tipos de cambio oficiales de referencia publicados diariamente por el **Banco Central Europeo (BCE)** en formato XML.
 
@@ -6,7 +6,7 @@ Proyecto perteneciente al **Módulo Profesional 486: Acceso a Datos**, orientado
 
 ---
 
-## 📋 Características Principales
+## Características Principales
 
 - **Conexión en Tiempo Real**: Descarga automática del feed XML público del BCE con gestión de tiempos de espera (*timeout*) y control de errores HTTP.
 - **Parsing XML Robusto**: Procesamiento del árbol XML mediante `xml.etree.ElementTree` de la librería estándar, resolviendo el espacio de nombres (*namespace*) oficial.
@@ -19,7 +19,7 @@ Proyecto perteneciente al **Módulo Profesional 486: Acceso a Datos**, orientado
 
 ---
 
-## 📂 Arquitectura del Proyecto
+## Arquitectura del Proyecto
 
 El proyecto sigue una arquitectura modular en dos capas bien diferenciadas:
 
@@ -47,7 +47,7 @@ ConversorDivisas/
 
 ---
 
-## ⚙️ Instalación y Requisitos
+## Instalación y Requisitos
 
 ### Requisitos Previos
 - Python 3.10 o superior (el proyecto utiliza el entorno virtual `.venv`).
@@ -73,7 +73,7 @@ Si necesitas reinstalar o desplegar en otro equipo:
 
 ---
 
-## 🚀 Ejecución de la Aplicación
+## Ejecución de la Aplicación
 
 Para iniciar el servidor local de Streamlit, ejecuta el siguiente comando desde la raíz del proyecto:
 
@@ -88,7 +88,7 @@ http://localhost:8501
 
 ---
 
-## 🧠 Lógica Técnica para la Defensa Oral (10 Minutos)
+## Lógica Técnica para la Defensa Oral (10 Minutos)
 
 Esta sección resume los conceptos clave evaluados en la rúbrica del proyecto:
 
@@ -123,7 +123,7 @@ Esta sección resume los conceptos clave evaluados en la rúbrica del proyecto:
 
 ---
 
-## 🛠️ Tecnologías Empleadas
+## Tecnologías Empleadas
 
 - **Lenguaje**: Python 3.13
 - **Librerías Estándar**: `xml.etree.ElementTree`

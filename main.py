@@ -3,7 +3,6 @@ from conversor_bce import descargar_xml, parsear_xml, convertir_divisa
 
 st.set_page_config(
     page_title="Conversor de Divisas (BCE)",
-    page_icon="💶",
     layout="centered"
 )
 
@@ -15,19 +14,19 @@ def cargar_datos_bce():
     return contenido_xml, fecha_oficial, dict_tasas
 
 
-st.title("💶 Conversor de Divisas (BCE)")
+st.title("Conversor de Divisas (BCE)")
 st.write("Esta aplicación consume **XML en tiempo real** del Banco Central Europeo.")
 
 try:
     xml_bytes, fecha, tasas = cargar_datos_bce()
 except Exception as error:
-    st.error(f"❌ Error al obtener los tipos de cambio del BCE: {error}")
+    st.error(f"Error al obtener los tipos de cambio del BCE: {error}")
     st.stop()
 
-with st.expander("🔍 Ver Estructura XML recibida (Raw Data)"):
+with st.expander("Ver Estructura XML recibida (Raw Data)"):
     st.code(xml_bytes.decode("utf-8", errors="replace"), language="xml")
 
-st.success(f"✅ Datos cargados. Fecha oficial: **{fecha}**")
+st.success(f"Datos cargados. Fecha oficial: **{fecha}**")
 
 col1, col2, col3 = st.columns([1.5, 1, 1])
 
@@ -53,14 +52,14 @@ if boton_calcular:
 
         st.markdown(f"**Valor en {moneda_destino}**")
         st.markdown(f"## {resultado:,.2f} {moneda_destino}")
-        st.markdown(f":green[↑ Tipo de cambio: 1 {moneda_origen} = {tasa_unitaria:.4f} {moneda_destino}]")
+        st.markdown(f":green[Tipo de cambio: 1 {moneda_origen} = {tasa_unitaria:.4f} {moneda_destino}]")
 
     except ValueError as err_val:
-        st.error(f"⚠️ {err_val}")
+        st.error(str(err_val))
 
 st.divider()
 
-st.subheader("📊 Tabla de Tipos de Cambio (Base EUR)")
+st.subheader("Tabla de Tipos de Cambio (Base EUR)")
 
 datos_tabla = [{"Moneda": m, "Tasa": t} for m, t in tasas.items()]
 st.dataframe(datos_tabla, use_container_width=True, hide_index=True)
